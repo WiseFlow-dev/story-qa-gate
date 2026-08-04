@@ -1,0 +1,38 @@
+{
+  "tenant_id": "tenant_antarctic_league_001",
+  "tenant_name": "Antarctic Football League",
+  "stories": [
+    {
+      "story_id": "story_ed_1",
+      "story_title": "TODO write matchday preview",
+      "pages": [
+        {
+          "page_id": "page_1",
+          "type": "image",
+          "asset_url": "https://cdn.storyteller.com/assets/promo/hero.jpg",
+          "action": {
+            "cta": "Read more",
+            "url": "https://antarcticfootballleague.com/lineup"
+          }
+        }
+      ],
+      "context": { "publish_date": "2026-02-14" }
+    },
+    {
+      "story_id": "story_ed_2",
+      "story_title": "Away day travel guide",
+      "pages": [
+        {
+          "page_id": "page_1",
+          "type": "image",
+          "asset_url": "https://cdn.storyteller.com/assets/promo/hero.jpg",
+          "action": {
+            "cta": "View lineup",
+            "url": "https://evil-antarcticfootballleague.com/lineup"
+          }
+        }
+      ],
+      "context": { "publish_date": "2026-02-14" }
+    }
+  ]
+}

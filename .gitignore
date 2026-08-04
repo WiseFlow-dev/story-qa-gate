@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.DS_Store
+
+# Large generated scale-test input is not committed; the generator script is.
+synthetic_stories.json
+
+# Never commit the task brief or any supplied task material.
+*.pdf
+
+# Working cache, not evidence. Committing it would make a reviewer's
+# first run report "0 new" and look like nothing happened.
+state.json

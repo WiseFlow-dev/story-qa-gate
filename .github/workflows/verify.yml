@@ -1,0 +1,48 @@
+name: verify
+
+on:
+  push:
+  schedule:
+    # Daily. Scheduled runs use the default branch only and may be delayed at peak times.
+    - cron: "17 6 * * *"
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Unit tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Cold pass (fresh state, everything is new)
+        run: |
+          python qa_gate.py sample_stories.json \
+            --state "$RUNNER_TEMP/state.json" \
+            --run-log "$RUNNER_TEMP/run_log.jsonl" \
+            --out "$RUNNER_TEMP/out_cold" \
+            --expect-delta new=2,changed=0,unchanged=0
+
+      - name: Warm pass (same state, nothing changed, results carried forward)
+        run: |
+          python qa_gate.py sample_stories.json \
+            --state "$RUNNER_TEMP/state.json" \
+            --run-log "$RUNNER_TEMP/run_log.jsonl" \
+            --out "$RUNNER_TEMP/out_warm" \
+            --expect-delta new=0,changed=0,unchanged=2
+
+      - name: Warm report must still contain the full snapshot
+        run: |
+          python - <<'PY'
+          import json, os, sys
+          p = os.path.join(os.environ["RUNNER_TEMP"], "out_warm", "quality_report.json")
+          r = json.load(open(p, encoding="utf-8"))
+          assert r["summary"]["stories_checked"] == 2, r["summary"]
+          assert r["findings"], "warm run lost its findings; carry-forward is broken"
+          print("warm report OK:", r["summary"], r["delta"])
+          PY

@@ -1,0 +1,74 @@
+{
+  "tenant_id": "tenant_antarctic_league_001",
+  "tenant_name": "Antarctic Football League",
+  "last_synced_at": "2026-02-14T10:05:00Z",
+  "stories": [
+    {
+      "story_id": "story_123",
+      "story_title": "Last 5 meetings: Penguin FC vs Seals United",
+      "pages": [
+        {
+          "page_id": "page_1",
+          "type": "video",
+          "asset_url": "https://cdn.storyteller.com/assets/story_123/page_1.mp4",
+          "action": {
+            "cta": "Watch highlights",
+            "url": "https://antarcticfootballleague.com/match-report"
+          }
+        },
+        {
+          "page_id": "page_2",
+          "type": "image",
+          "asset_url": "https://cdn.storyteller.com/assets/story_123/page_2.jpg",
+          "action": {
+            "cta": "Buy tickets",
+            "url": "https://antarcticfootballleague.com/highlights"
+          }
+        }
+      ],
+      "context": {
+        "categories": [
+          "Penguin FC",
+          "Seals United",
+          "PFC v SU - 14/02/26"
+        ],
+        "tenant": "Antarctic Football League",
+        "publish_date": "2026-02-14"
+      }
+    },
+    {
+      "story_id": "story_124",
+      "story_title": "Matchday build-up: PFC v SU",
+      "pages": [
+        {
+          "page_id": "page_1",
+          "type": "image",
+          "asset_url": "https://cdn.storyteller.com/assets/story_124/page_1.jpg",
+          "action": {
+            "cta": "View lineup",
+            "url": "https://antarcticfootballleague.com/lineup"
+          }
+        },
+        {
+          "page_id": "page_2",
+          "type": "video",
+          "asset_url": "https://cdn.storyteller.com/assets/story_124/page_2.mp4",
+          "action": {
+            "cta": "Live match centre",
+            "url": "https://antarcticfootballleague.com/live"
+          }
+        }
+      ],
+      "context": {
+        "categories": [
+          "Penguin FC",
+          "Seals United",
+          "PFC v SU - 14/02/26",
+          "Matchday"
+        ],
+        "tenant": "Antarctic Football League",
+        "publish_date": "2026-02-14"
+      }
+    }
+  ]
+}

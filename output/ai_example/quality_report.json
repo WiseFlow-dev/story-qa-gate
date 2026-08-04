@@ -1,0 +1,129 @@
+{
+  "checker_version": "1.0.0",
+  "policy_version": "1.0.0",
+  "tenant_id": "tenant_antarctic_league_001",
+  "generated_at": "2026-08-04T18:12:18Z",
+  "summary": {
+    "stories_checked": 2,
+    "pages_checked": 5,
+    "pages_pass": 2,
+    "pages_warning": 3,
+    "pages_fail": 0,
+    "fail": 0,
+    "warning": 3,
+    "high_risk_findings": 3,
+    "needs_human_review": 3
+  },
+  "delta": {
+    "new": 2,
+    "changed": 0,
+    "unchanged": 0,
+    "carried_forward": 0
+  },
+  "coverage": {
+    "page_types_not_assessed": 0,
+    "semantic_check_not_applicable": 4,
+    "semantic_check_ai_reviewed": 4
+  },
+  "ai": {
+    "cache_hits": 4,
+    "cache_misses": 0
+  },
+  "pages": [
+    {
+      "story_id": "story_amb_rule",
+      "page_id": "page_1",
+      "status": "warning",
+      "checks": [
+        "cta_destination_mismatch"
+      ],
+      "source": "rechecked"
+    },
+    {
+      "story_id": "story_amb_ai",
+      "page_id": "page_1",
+      "status": "warning",
+      "checks": [
+        "semantic_review_uncertain"
+      ],
+      "source": "rechecked"
+    },
+    {
+      "story_id": "story_amb_ai",
+      "page_id": "page_2",
+      "status": "pass",
+      "checks": [],
+      "source": "rechecked"
+    },
+    {
+      "story_id": "story_amb_ai",
+      "page_id": "page_3",
+      "status": "warning",
+      "checks": [
+        "cta_destination_mismatch"
+      ],
+      "source": "rechecked"
+    },
+    {
+      "story_id": "story_amb_ai",
+      "page_id": "page_4",
+      "status": "pass",
+      "checks": [],
+      "source": "rechecked"
+    }
+  ],
+  "findings": [
+    {
+      "story_id": "story_amb_rule",
+      "page_id": "page_1",
+      "status": "warning",
+      "check_id": "cta_destination_mismatch",
+      "confidence": "medium",
+      "risk": "high",
+      "reason": "CTA 'Buy tickets' appears inconsistent with destination path '/highlights'.",
+      "evidence": {
+        "cta": "Buy tickets",
+        "url": "https://antarcticfootballleague.com/highlights",
+        "cta_intent": "ticketing",
+        "path_intent": "watch"
+      },
+      "needs_human_review": true,
+      "source": "rule"
+    },
+    {
+      "story_id": "story_amb_ai",
+      "page_id": "page_1",
+      "status": "warning",
+      "check_id": "semantic_review_uncertain",
+      "confidence": "low",
+      "risk": "high",
+      "reason": "The destination path is an opaque numeric identifier that carries no readable intent, so the CTA cannot be confirmed or contradicted from the URL alone.",
+      "evidence": {
+        "cta": "Buy tickets",
+        "url": "https://antarcticfootballleague.com/p/48219"
+      },
+      "needs_human_review": true,
+      "source": "ai_semantic_review"
+    },
+    {
+      "story_id": "story_amb_ai",
+      "page_id": "page_3",
+      "status": "warning",
+      "check_id": "cta_destination_mismatch",
+      "confidence": "high",
+      "risk": "high",
+      "reason": "The CTA promises editorial squad content but the destination is a season ticket sales page, so the reader would not land on what was offered.",
+      "evidence": {
+        "cta": "Meet the squad",
+        "url": "https://antarcticfootballleague.com/tickets/season-2026"
+      },
+      "needs_human_review": true,
+      "source": "ai_semantic_review"
+    }
+  ],
+  "performance": {
+    "seconds": 0.0047,
+    "stories_per_second": 426.7,
+    "peak_traced_memory_mb": 0.07
+  }
+}

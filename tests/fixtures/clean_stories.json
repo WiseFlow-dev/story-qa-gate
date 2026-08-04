@@ -1,0 +1,47 @@
+{
+  "tenant_id": "tenant_antarctic_league_001",
+  "tenant_name": "Antarctic Football League",
+  "stories": [
+    {
+      "story_id": "story_clean_1",
+      "story_title": "Penguin FC squad news",
+      "pages": [
+        {
+          "page_id": "page_1",
+          "type": "image",
+          "asset_url": "https://cdn.storyteller.com/assets/story_clean_1/page_1.jpg",
+          "action": {
+            "cta": "View lineup",
+            "url": "https://antarcticfootballleague.com/lineup"
+          }
+        },
+        {
+          "page_id": "page_2",
+          "type": "video",
+          "asset_url": "https://cdn.storyteller.com/assets/story_clean_1/page_2.mp4",
+          "action": {
+            "cta": "Watch highlights",
+            "url": "https://antarcticfootballleague.com/highlights"
+          }
+        }
+      ],
+      "context": { "publish_date": "2026-02-14" }
+    },
+    {
+      "story_id": "story_clean_2",
+      "story_title": "Seals United season pass",
+      "pages": [
+        {
+          "page_id": "page_1",
+          "type": "image",
+          "asset_url": "https://cdn.storyteller.com/assets/story_clean_2/page_1.jpg",
+          "action": {
+            "cta": "Buy tickets",
+            "url": "https://antarcticfootballleague.com/tickets"
+          }
+        }
+      ],
+      "context": { "publish_date": "2026-02-15" }
+    }
+  ]
+}

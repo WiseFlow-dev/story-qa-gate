@@ -1,0 +1,78 @@
+{
+  "cache_version": 1,
+  "_note": "Real model responses, recorded so the checker, its tests and the committed report reproduce offline with no API key. Cache key includes tenant_id and policy_version on purpose: a cache keyed only on (cta, path) would apply one tenant's decision under another tenant's policy.",
+  "entries": [
+    {
+      "cache_key": "164ee65371a3a10424c1c2b45df943bc",
+      "input": {
+        "cta": "Buy tickets",
+        "url_path": "/p/48219",
+        "tenant_id": "tenant_antarctic_league_001"
+      },
+      "output": {
+        "decision": "uncertain",
+        "confidence": "low",
+        "reason": "The destination path is an opaque numeric identifier that carries no readable intent, so the CTA cannot be confirmed or contradicted from the URL alone."
+      },
+      "model": "claude-opus-5",
+      "prompt_version": "semantic_review_v1",
+      "policy_version": "1.0.0",
+      "timestamp": "2026-08-04T00:00:00Z",
+      "execution_mode": "manual_assistant_session"
+    },
+    {
+      "cache_key": "ffddd30ab670ba6c6adef86ccf9eab83",
+      "input": {
+        "cta": "Shop the new kit",
+        "url_path": "/store/2026-home-shirt",
+        "tenant_id": "tenant_antarctic_league_001"
+      },
+      "output": {
+        "decision": "match",
+        "confidence": "high",
+        "reason": "A retail CTA points to a store path for a home shirt, which is a consistent commercial destination."
+      },
+      "model": "claude-opus-5",
+      "prompt_version": "semantic_review_v1",
+      "policy_version": "1.0.0",
+      "timestamp": "2026-08-04T00:00:00Z",
+      "execution_mode": "manual_assistant_session"
+    },
+    {
+      "cache_key": "f9b4ec239f48b792a61f05a1f1eb6eb1",
+      "input": {
+        "cta": "Meet the squad",
+        "url_path": "/tickets/season-2026",
+        "tenant_id": "tenant_antarctic_league_001"
+      },
+      "output": {
+        "decision": "mismatch",
+        "confidence": "high",
+        "reason": "The CTA promises editorial squad content but the destination is a season ticket sales page, so the reader would not land on what was offered."
+      },
+      "model": "claude-opus-5",
+      "prompt_version": "semantic_review_v1",
+      "policy_version": "1.0.0",
+      "timestamp": "2026-08-04T00:00:00Z",
+      "execution_mode": "manual_assistant_session"
+    },
+    {
+      "cache_key": "f059b7aa6b1195a176024e914840e1cf",
+      "input": {
+        "cta": "Read the full report",
+        "url_path": "/news/penguin-fc-injury-update",
+        "tenant_id": "tenant_antarctic_league_001"
+      },
+      "output": {
+        "decision": "match",
+        "confidence": "high",
+        "reason": "An editorial CTA points to a news article path, which is a consistent destination."
+      },
+      "model": "claude-opus-5",
+      "prompt_version": "semantic_review_v1",
+      "policy_version": "1.0.0",
+      "timestamp": "2026-08-04T00:00:00Z",
+      "execution_mode": "manual_assistant_session"
+    }
+  ]
+}

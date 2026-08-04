@@ -1,0 +1,60 @@
+{
+  "tenant_id": "tenant_antarctic_league_001",
+  "tenant_name": "Antarctic Football League",
+  "stories": [
+    {
+      "story_title": "Story with no id",
+      "pages": [
+        {
+          "page_id": "page_1",
+          "type": "image",
+          "asset_url": "https://cdn.storyteller.com/assets/x/page_1.jpg"
+        }
+      ]
+    },
+    {
+      "story_id": "story_invalid_2",
+      "story_title": "Story with no pages",
+      "pages": []
+    },
+    {
+      "story_id": "story_invalid_3",
+      "story_title": "Broken assets and actions",
+      "pages": [
+        {
+          "page_id": "page_1",
+          "type": "image"
+        },
+        {
+          "page_id": "page_2",
+          "type": "image",
+          "asset_url": "http://cdn.storyteller.com/assets/x/page_2.jpg"
+        },
+        {
+          "page_id": "page_3",
+          "type": "image",
+          "asset_url": "https://cdn.storyteller.com/assets/x/page_3.mp4"
+        },
+        {
+          "type": "video",
+          "asset_url": "https://cdn.storyteller.com/assets/x/page_4.mp4"
+        },
+        {
+          "page_id": "page_5",
+          "type": "video",
+          "asset_url": "https://cdn.storyteller.com/assets/x/page_5.mp4",
+          "action": { "cta": "Buy tickets" }
+        },
+        {
+          "page_id": "page_6",
+          "type": "video",
+          "asset_url": "https://cdn.storyteller.com/assets/x/page_6.mp4",
+          "action": {
+            "cta": "Buy tickets",
+            "url": "https://antarcticfootballleague.com@attacker.example/tickets"
+          }
+        }
+      ]
+    }
+  ]
+}

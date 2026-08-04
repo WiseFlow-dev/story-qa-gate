@@ -1,0 +1,67 @@
+{
+  "policy_version": "1.0.0",
+  "_note": "Example tenant policy for the illustrative tenant used in the task brief. This is demo configuration, not any real customer's policy.",
+
+  "tenant_id": "tenant_antarctic_league_001",
+
+  "allowed_action_hosts": [
+    "antarcticfootballleague.com",
+    "www.antarcticfootballleague.com"
+  ],
+
+  "allowed_asset_hosts": [
+    "cdn.storyteller.com"
+  ],
+
+  "cta_intent_buckets": {
+    "ticketing": {
+      "cta_terms": ["ticket", "tickets", "buy", "book", "booking"],
+      "path_terms": ["ticket", "tickets", "booking", "checkout"]
+    },
+    "watch": {
+      "cta_terms": ["watch", "highlights", "highlight", "video"],
+      "path_terms": ["watch", "highlight", "highlights", "video", "match-report"]
+    },
+    "lineup": {
+      "cta_terms": ["lineup", "line-up", "team news"],
+      "path_terms": ["lineup", "line-up", "team-news"]
+    },
+    "live": {
+      "cta_terms": ["live", "match centre", "match center"],
+      "path_terms": ["live", "match-centre", "match-center", "matchcentre"]
+    }
+  },
+
+  "generic_ctas": [
+    "click here",
+    "read more",
+    "learn more",
+    "find out more",
+    "more",
+    "here",
+    "tap here",
+    "link",
+    "see more"
+  ],
+
+  "_placeholder_note": "Only unambiguous draft markers. 'test' and 'draft' were removed: 'Test Match Results' and 'Draft Kings sponsorship' are real titles, and a check that punishes them is worse than no check.",
+  "placeholder_markers": [
+    "todo",
+    "tbc",
+    "tbd",
+    "untitled",
+    "lorem ipsum",
+    "placeholder",
+    "copy of"
+  ],
+
+  "_reusable_note": "Assets matching these patterns are meant to appear in many Stories, so reuse is not flagged.",
+  "reusable_asset_patterns": [
+    "/shared/",
+    "/sponsor/",
+    "/ident/",
+    "/branding/"
+  ],
+
+  "assessed_page_types": ["image", "video"]
+}

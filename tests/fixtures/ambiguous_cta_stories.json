@@ -1,0 +1,65 @@
+{
+  "tenant_id": "tenant_antarctic_league_001",
+  "tenant_name": "Antarctic Football League",
+  "stories": [
+    {
+      "story_id": "story_amb_rule",
+      "story_title": "Rules can decide this one",
+      "pages": [
+        {
+          "page_id": "page_1",
+          "type": "image",
+          "asset_url": "https://cdn.storyteller.com/assets/amb/page_1.jpg",
+          "action": {
+            "cta": "Buy tickets",
+            "url": "https://antarcticfootballleague.com/highlights"
+          }
+        }
+      ],
+      "context": { "publish_date": "2026-02-14" }
+    },
+    {
+      "story_id": "story_amb_ai",
+      "story_title": "Rules abstain, the model is asked",
+      "pages": [
+        {
+          "page_id": "page_1",
+          "type": "image",
+          "asset_url": "https://cdn.storyteller.com/assets/amb/ai_1.jpg",
+          "action": {
+            "cta": "Buy tickets",
+            "url": "https://antarcticfootballleague.com/p/48219"
+          }
+        },
+        {
+          "page_id": "page_2",
+          "type": "image",
+          "asset_url": "https://cdn.storyteller.com/assets/amb/ai_2.jpg",
+          "action": {
+            "cta": "Shop the new kit",
+            "url": "https://antarcticfootballleague.com/store/2026-home-shirt"
+          }
+        },
+        {
+          "page_id": "page_3",
+          "type": "image",
+          "asset_url": "https://cdn.storyteller.com/assets/amb/ai_3.jpg",
+          "action": {
+            "cta": "Meet the squad",
+            "url": "https://antarcticfootballleague.com/tickets/season-2026"
+          }
+        },
+        {
+          "page_id": "page_4",
+          "type": "image",
+          "asset_url": "https://cdn.storyteller.com/assets/amb/ai_4.jpg",
+          "action": {
+            "cta": "Read the full report",
+            "url": "https://antarcticfootballleague.com/news/penguin-fc-injury-update"
+          }
+        }
+      ],
+      "context": { "publish_date": "2026-02-14" }
+    }
+  ]
+}
